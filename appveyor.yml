@@ -18,8 +18,8 @@ test_script:
   - node --version
   - npm --version
   # run tests
-  - make
-  - make
+  - c:\MinGW\bin\mingw32-make.exe
+  - c:\MinGW\bin\mingw32-make.exe
 
 # Don't actually build.
 build: off
