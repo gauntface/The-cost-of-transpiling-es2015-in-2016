@@ -1,8 +1,6 @@
 .PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack
 
 all:
-	make typescript
-	make size
 	make babel
 	make size
 	make babelify
