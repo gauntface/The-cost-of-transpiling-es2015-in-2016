@@ -1,28 +1,28 @@
 .PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack
 
 all:
-	c:\MinGW\bin\mingw32-make.exe typescript
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe babel
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe babelify
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe rollup-plugin-babel
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe rollup
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe closure
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe traceur
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe webpack
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe jspm
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe webpack-2
-	c:\MinGW\bin\mingw32-make.exe size
-	c:\MinGW\bin\mingw32-make.exe typescript-webpack
-	c:\MinGW\bin\mingw32-make.exe size
+	make typescript
+	make size
+	make babel
+	make size
+	make babelify
+	make size
+	make rollup-plugin-babel
+	make size
+	make rollup
+	make size
+	make closure
+	make size
+	make traceur
+	make size
+	make webpack
+	make size
+	make jspm
+	make size
+	make webpack-2
+	make size
+	make typescript-webpack
+	make size
 
 typescript:
 	cd typescript; npm i; npm run compile;
