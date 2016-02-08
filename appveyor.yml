@@ -11,6 +11,8 @@ environment:
 install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
+  # Add make to path (kind of)
+  - copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
 
 # Post-install test scripts.
 test_script:
@@ -18,8 +20,8 @@ test_script:
   - node --version
   - npm --version
   # run tests
-  - c:\MinGW\bin\mingw32-make.exe
-  - c:\MinGW\bin\mingw32-make.exe
+  - make
+  - make
 
 # Don't actually build.
 build: off
