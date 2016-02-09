@@ -28,8 +28,8 @@ build_script:
   - node --version
   - npm --version
   # run tests
-  - cmd: '%CYG_ROOT%/bin/bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null;mount C:/MinGW /mingw; make;"'
-  - cmd: '%CYG_ROOT%/bin/bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null;mount C:/MinGW /mingw; make;"'
+  - cmd: '%CYG_ROOT%/bin/bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null;mount C:/MinGW /mingw; make --makefile=Makefile-Windows;"'
+  # - cmd: '%CYG_ROOT%/bin/bash -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null;mount C:/MinGW /mingw; make --makefile=Makefile-Windows;"'
 
 # Don't actually build.
 build: on
