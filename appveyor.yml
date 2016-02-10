@@ -20,4 +20,4 @@ test_script:
   - cmd: 'babel src/src --out-dir dist'
 
 
-build: on
+build: off
