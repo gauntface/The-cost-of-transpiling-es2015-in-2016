@@ -10,14 +10,16 @@ environment:
 install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
+  # install modules
+  - npm install -g babel-cli babel-preset-es2015 browserify bundle-collapser traceur uglify-js
 
 # Post-install test scripts.
 test_script:
+  # Output useful info for debugging.
   - node --version
   - npm --version
-  - cmd: "npm install -g babel-cli babel-preset-es2015 browserify bundle-collapser traceur uglify-js"
   # run tests
-  # - cmd: 'babel src/src --out-dir dist'
+  - npm test
 
-
+# Don't actually build.
 build: off
