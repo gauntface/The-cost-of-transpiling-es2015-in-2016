@@ -15,9 +15,9 @@ install:
 test_script:
   - node --version
   - npm --version
-  - cmd: 'npm install -g babel-cli babel-preset-es2015 browserify bundle-collapser traceur uglify-js'
+  - cmd: "npm install -g babel-cli babel-preset-es2015 browserify bundle-collapser traceur uglify-js"
   # run tests
-  - cmd: 'babel src/src --out-dir dist'
+  # - cmd: 'babel src/src --out-dir dist'
 
 
 build: off
