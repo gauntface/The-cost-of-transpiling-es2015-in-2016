@@ -19,8 +19,7 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
-  - node node_modules\babel-cli\bin\babel.js src\src --presets babel-preset-es2015 --out-dir dist
-  - node node_modules\browserify\bin\cmd.js -p bundle-collapser\plugin dist\app.js | node ./node_modules/uglify-js/bin/uglifyjs --compress --mangle --screw-ie8 - > src\dist\bundle.js
+  - time node node_modules\babel-cli\bin\babel.js src\src --presets babel-preset-es2015 --out-dir dist && node node_modules\browserify\bin\cmd.js -p bundle-collapser\plugin dist\app.js | node ./node_modules/uglify-js/bin/uglifyjs --compress --mangle --screw-ie8 - > src\dist\bundle.js
 
 # Don't actually build.
 build: off
