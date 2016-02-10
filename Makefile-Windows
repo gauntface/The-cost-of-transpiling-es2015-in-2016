@@ -38,7 +38,7 @@ typescript:
 
 babel:
 	cd babel; npm i;
-	cd babel; time $(babel) ..\src\src --presets .\node_modules\babel-preset-es2015 --out-dir dist && $(browserify) -p bundle-collapser/plugin dist\app.js | $(uglifyjs) --compress --mangle --screw-ie8 - > ..\src\dist\bundle.js
+	cd babel; time $(babel) ..\src\src --presets node_modules\babel-preset-es2015 --out-dir dist && $(browserify) -p bundle-collapser/plugin dist\app.js | $(uglifyjs) --compress --mangle --screw-ie8 - > ..\src\dist\bundle.js
 
 babelify:
 	cd babelify; npm i;
